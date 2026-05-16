@@ -1,0 +1,23 @@
+{
+  "name": "errandsee",
+  "version": "1.0.0",
+  "description": "Helping neighbors understand convenient transit options",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eebbesen/errandsee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eebbesen/errandsee/issues"
+  },
+  "homepage": "https://github.com/eebbesen/errandsee#readme",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
