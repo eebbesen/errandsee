@@ -5,6 +5,6 @@ Helping neighbors understand convenient transit options
 
 ### Playwright
 
-If running the script to convert html to svg/png node package [Playwright](https://playwright.dev/) is required
+If running the script to convert html to pdf/png node package [Playwright](https://playwright.dev/) is required
 
     npm install playwright
