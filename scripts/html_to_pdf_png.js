@@ -1,5 +1,6 @@
 const { chromium } = require('playwright');
 const path = require('path');
+const fs = require('fs');
 
 const htmlFile = process.argv[2];
 const outputDir = process.argv[3];
@@ -17,5 +18,13 @@ const baseName = path.basename(htmlFile, '.html');
   await page.goto('file://' + path.resolve(htmlFile));
   await page.screenshot({ path: `${outputDir}/${baseName}.png`, fullPage: true, omitBackground: false });
   await page.pdf({ path: `${outputDir}/${baseName}.pdf`, width: '1840px', height: '1520px', printBackground: true });
+
+  const svgContent = await page.evaluate(() => document.querySelector('svg')?.outerHTML ?? '');
+  if (svgContent) {
+    fs.writeFileSync(`${outputDir}/${baseName}.svg`, svgContent);
+  } else {
+    console.warn('No SVG element found in page, skipping SVG output.');
+  }
+
   await browser.close();
 })();
