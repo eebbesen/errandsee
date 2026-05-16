@@ -83,48 +83,26 @@
         <styleUrl>#line-0F9D58-3325-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-E65100-1000-normal">
+    <Style id="line-E65100-3519-normal">
       <LineStyle>
         <color>ff0051e6</color>
-        <width>1</width>
+        <width>3.519</width>
       </LineStyle>
     </Style>
-    <Style id="line-E65100-1000-highlight">
+    <Style id="line-E65100-3519-highlight">
       <LineStyle>
         <color>ff0051e6</color>
-        <width>1.5</width>
+        <width>5.2785</width>
       </LineStyle>
     </Style>
-    <StyleMap id="line-E65100-1000">
+    <StyleMap id="line-E65100-3519">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-E65100-1000-normal</styleUrl>
+        <styleUrl>#line-E65100-3519-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-E65100-1000-highlight</styleUrl>
-      </Pair>
-    </StyleMap>
-    <Style id="line-E65100-1200-normal">
-      <LineStyle>
-        <color>ff0051e6</color>
-        <width>1.2</width>
-      </LineStyle>
-    </Style>
-    <Style id="line-E65100-1200-highlight">
-      <LineStyle>
-        <color>ff0051e6</color>
-        <width>1.8</width>
-      </LineStyle>
-    </Style>
-    <StyleMap id="line-E65100-1200">
-      <Pair>
-        <key>normal</key>
-        <styleUrl>#line-E65100-1200-normal</styleUrl>
-      </Pair>
-      <Pair>
-        <key>highlight</key>
-        <styleUrl>#line-E65100-1200-highlight</styleUrl>
+        <styleUrl>#line-E65100-3519-highlight</styleUrl>
       </Pair>
     </StyleMap>
     <Style id="line-F9A825-3325-normal">
@@ -150,224 +128,11 @@
       </Pair>
     </StyleMap>
     <Folder>
-      <name>grocery_stores.csv</name>
-      <Placemark>
-        <name><![CDATA[Kowalski's Markets]]></name>
-        <address>1261 Grand Ave, St Paul, MN 55105</address>
-        <description><![CDATA[address: 1261 Grand Ave, St Paul, MN 55105<br>description: Full-service upscale grocer with butcher, bakery, deli, and Starbucks]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>1261 Grand Ave, St Paul, MN 55105</value>
-          </Data>
-          <Data name="description">
-            <value>Full-service upscale grocer with butcher, bakery, deli, and Starbucks</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name><![CDATA[Trader Joe's]]></name>
-        <address>484 Lexington Pkwy S, St Paul, MN 55105</address>
-        <description><![CDATA[address: 484 Lexington Pkwy S, St Paul, MN 55105<br>description: Specialty grocer with strong organic and prepared foods selection]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>484 Lexington Pkwy S, St Paul, MN 55105</value>
-          </Data>
-          <Data name="description">
-            <value>Specialty grocer with strong organic and prepared foods selection</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name><![CDATA[Oxendale's Market]]></name>
-        <address>1326 Randolph Ave, St Paul, MN 55105</address>
-        <description><![CDATA[address: 1326 Randolph Ave, St Paul, MN 55105<br>description: Independent neighborhood grocer with excellent meat counter]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>1326 Randolph Ave, St Paul, MN 55105</value>
-          </Data>
-          <Data name="description">
-            <value>Independent neighborhood grocer with excellent meat counter</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Mississippi Market Co-op</name>
-        <address>622 Selby Ave, St Paul, MN 55104</address>
-        <description><![CDATA[address: 622 Selby Ave, St Paul, MN 55104<br>description: Natural foods co-op on Selby Ave]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>622 Selby Ave, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Natural foods co-op on Selby Ave</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Whole Foods Market</name>
-        <address>1575 Selby Ave, St Paul, MN 55104</address>
-        <description><![CDATA[address: 1575 Selby Ave, St Paul, MN 55104<br>description: Premium natural foods grocer near Snelling Ave]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>1575 Selby Ave, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Premium natural foods grocer near Snelling Ave</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>ALDI</name>
-        <address>1134 University Ave W, St Paul, MN 55104</address>
-        <description><![CDATA[address: 1134 University Ave W, St Paul, MN 55104<br>description: Budget discount grocer on the Green Line]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>1134 University Ave W, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Budget discount grocer on the Green Line</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Target</name>
-        <address>1300 University Ave W, St Paul, MN 55104</address>
-        <description><![CDATA[address: 1300 University Ave W, St Paul, MN 55104<br>description: Large-format Target with full grocery section on the Green Line]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>1300 University Ave W, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Large-format Target with full grocery section on the Green Line</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Shuang Hur Supermarket</name>
-        <address>654 University Ave W, St Paul, MN 55104</address>
-        <description><![CDATA[address: 654 University Ave W, St Paul, MN 55104<br>description: Large pan-Asian grocery with exceptional seafood and produce]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>654 University Ave W, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Large pan-Asian grocery with exceptional seafood and produce</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Phil Oriental Imports</name>
-        <address>789 University Ave W, St Paul, MN 55104</address>
-        <description><![CDATA[address: 789 University Ave W, St Paul, MN 55104<br>description: Filipino grocery and deli with weekend buffet]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>789 University Ave W, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Filipino grocery and deli with weekend buffet</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name><![CDATA[Choua's Market]]></name>
-        <address>995 University Ave W, St Paul, MN 55104</address>
-        <description><![CDATA[address: 995 University Ave W, St Paul, MN 55104<br>description: Small Hmong grocery with dry goods, snacks, and frozen items]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>995 University Ave W, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Small Hmong grocery with dry goods, snacks, and frozen items</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Mi Linda Tierra</name>
-        <address>461 University Ave W, St Paul, MN 55103</address>
-        <description><![CDATA[address: 461 University Ave W, St Paul, MN 55103<br>description: Peruvian and Latin specialty grocery with imported ingredients]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>461 University Ave W, St Paul, MN 55103</value>
-          </Data>
-          <Data name="description">
-            <value>Peruvian and Latin specialty grocery with imported ingredients</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name><![CDATA[Ashama Grocery & Meat]]></name>
-        <address>St Paul, MN 55104</address>
-        <description><![CDATA[address: St Paul, MN 55104<br>description: 804 University Ave W]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>804 University Ave W</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Addis Market</name>
-        <address>515 Snelling Ave N, St Paul, MN 55104</address>
-        <description><![CDATA[address: 515 Snelling Ave N, St Paul, MN 55104<br>description: Ethiopian grocery specializing in spices, injera, teff, and coffee]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>515 Snelling Ave N, St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>Ethiopian grocery specializing in spices, injera, teff, and coffee</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name><![CDATA[St Paul Grocery & Halal Market]]></name>
-        <address>St Paul, MN 55104</address>
-        <description><![CDATA[address: St Paul, MN 55104<br>description: 470 Lexington Pkwy N]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>St Paul, MN 55104</value>
-          </Data>
-          <Data name="description">
-            <value>470 Lexington Pkwy N</value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-      <Placemark>
-        <name>Golden Fig Fine Foods</name>
-        <address>794 Grand Ave, St Paul, MN 55105</address>
-        <description><![CDATA[address: 794 Grand Ave, St Paul, MN 55105<br>description: Gourmet grocery store with artisan foods, baked goods, cookbooks & a locavore philosophy.]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <ExtendedData>
-          <Data name="address">
-            <value>794 Grand Ave, St Paul, MN 55105</value>
-          </Data>
-          <Data name="description">
-            <value><![CDATA[Gourmet grocery store with artisan foods, baked goods, cookbooks & a locavore philosophy.]]></value>
-          </Data>
-        </ExtendedData>
-      </Placemark>
-    </Folder>
-    <Folder>
       <name>Metro_Transit_Routes</name>
       <Placemark>
         <name>65</name>
         <description><![CDATA[description: <br>OBJECTID: 93<br>route: 65<br>routesort: 65<br>RouteDescription: Dale St - Co Rd B - Rosedale<br>RouteOperator: P<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: SupportLoc<br>IsPublic: 1<br>wk_ftrip: 04:59:00<br>wk_ltrip: 00:44:00<br>wk_span: 19:45:00<br>wk_trip_freq: 65<br>sat_ftrip: 04:40:00<br>sat_ltrip: 00:28:00<br>sat_span: 19:48:00<br>sat_trip_freq: 68<br>sun_ftrip: 04:38:00<br>sun_ltrip: 00:38:00<br>sun_span: 20:00:00<br>sun_trip_freq: 40<br>Shape__Length: 22609.5595709421]]></description>
-        <styleUrl>#line-E65100-1000</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -1619,7 +1384,7 @@
       <Placemark>
         <name>83</name>
         <description><![CDATA[description: <br>OBJECTID: 137<br>route: 83<br>routesort: 83<br>RouteDescription: Rosedale - Lexington Av<br>RouteOperator: P<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: SupportLoc<br>IsPublic: 1<br>wk_ftrip: 05:47:00<br>wk_ltrip: 19:07:00<br>wk_span: 13:20:00<br>wk_trip_freq: 52<br>sat_ftrip: 07:55:00<br>sat_ltrip: 19:13:00<br>sat_span: 11:18:00<br>sat_trip_freq: 44<br>sun_ftrip: 07:55:00<br>sun_ltrip: 19:13:00<br>sun_span: 11:18:00<br>sun_trip_freq: 44<br>Shape__Length: 28453.6278727712]]></description>
-        <styleUrl>#line-E65100-1000</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -6096,7 +5861,7 @@
       <Placemark>
         <name>134</name>
         <description><![CDATA[description: <br>OBJECTID: 12<br>route: 134<br>routesort: 134<br>RouteDescription: Ltd Stop - Highland - Cleveland - Cretin - Mpls<br>RouteOperator: M<br>EffectiveDate: 2025/08/16 00:00:00+00<br>payleavedirectionid: 2<br>routepayleave: 1<br>RouteClass: CommExpress<br>IsPublic: 1<br>wk_ftrip: 06:05:00<br>wk_ltrip: 17:23:00<br>wk_span: 11:18:00<br>wk_trip_freq: 4<br>sat_ftrip: <br>sat_ltrip: <br>sat_span: <br>sat_trip_freq: <br>sun_ftrip: <br>sun_ltrip: <br>sun_span: <br>sun_trip_freq: <br>Shape__Length: 31100.4198656411]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -7621,7 +7386,7 @@
       <Placemark>
         <name>38</name>
         <description><![CDATA[description: <br>OBJECTID: 48<br>route: 38<br>routesort: 38<br>RouteDescription: 38th St-Highland Village-Uptown-Hopkins-Opus<br>RouteOperator: M<br>EffectiveDate: 2025/06/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: SupportLoc<br>IsPublic: 1<br>wk_ftrip: 04:00:00<br>wk_ltrip: 00:45:00<br>wk_span: 20:45:00<br>wk_trip_freq: 78<br>sat_ftrip: 04:22:00<br>sat_ltrip: 00:31:00<br>sat_span: 20:09:00<br>sat_trip_freq: 76<br>sun_ftrip: 04:22:00<br>sun_ltrip: 00:31:00<br>sun_span: 20:09:00<br>sun_trip_freq: 76<br>Shape__Length: 57457.4254728124]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -11118,7 +10883,7 @@
       <Placemark>
         <name>63</name>
         <description><![CDATA[description: <br>OBJECTID: 90<br>route: 63<br>routesort: 63<br>RouteDescription: Raymond Sta - Grand Av - Sunray<br>RouteOperator: M<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: CoreLoc<br>IsPublic: 1<br>wk_ftrip: 04:28:00<br>wk_ltrip: 01:44:00<br>wk_span: 21:16:00<br>wk_trip_freq: 138<br>sat_ftrip: 04:34:00<br>sat_ltrip: 01:44:00<br>sat_span: 21:10:00<br>sat_trip_freq: 119<br>sun_ftrip: 04:34:00<br>sun_ltrip: 01:43:00<br>sun_span: 21:09:00<br>sun_trip_freq: 96<br>Shape__Length: 36730.4009292651]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -12870,7 +12635,7 @@
       <Placemark>
         <name>65</name>
         <description><![CDATA[description: <br>OBJECTID: 93<br>route: 65<br>routesort: 65<br>RouteDescription: Dale St - Co Rd B - Rosedale<br>RouteOperator: P<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: SupportLoc<br>IsPublic: 1<br>wk_ftrip: 04:59:00<br>wk_ltrip: 00:44:00<br>wk_span: 19:45:00<br>wk_trip_freq: 65<br>sat_ftrip: 04:40:00<br>sat_ltrip: 00:28:00<br>sat_span: 19:48:00<br>sat_trip_freq: 68<br>sun_ftrip: 04:38:00<br>sun_ltrip: 00:38:00<br>sun_span: 20:00:00<br>sun_trip_freq: 40<br>Shape__Length: 22609.5595709421]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -14122,7 +13887,7 @@
       <Placemark>
         <name>72</name>
         <description><![CDATA[description: <br>OBJECTID: 106<br>route: 72<br>routesort: 72<br>RouteDescription: Midway-Selby Av-Burns Av-Sunray<br>RouteOperator: P<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: CoreLoc<br>IsPublic: 1<br>wk_ftrip: 04:34:00<br>wk_ltrip: 22:37:00<br>wk_span: 18:03:00<br>wk_trip_freq: 68<br>sat_ftrip: 06:54:00<br>sat_ltrip: 22:06:00<br>sat_span: 15:12:00<br>sat_trip_freq: 57<br>sun_ftrip: 06:56:00<br>sun_ltrip: 22:05:00<br>sun_span: 15:09:00<br>sun_trip_freq: 57<br>Shape__Length: 29802.3831172746]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -15655,7 +15420,7 @@
       <Placemark>
         <name>74</name>
         <description><![CDATA[description: <br>OBJECTID: 112<br>route: 74<br>routesort: 74<br>RouteDescription: 46th St - Randolph - W 7th St - E 7th St - Sunray<br>RouteOperator: M<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: CoreLoc<br>IsPublic: 1<br>wk_ftrip: 03:25:00<br>wk_ltrip: 01:43:00<br>wk_span: 22:18:00<br>wk_trip_freq: 112<br>sat_ftrip: 03:31:00<br>sat_ltrip: 01:38:00<br>sat_span: 22:07:00<br>sat_trip_freq: 75<br>sun_ftrip: 03:31:00<br>sun_ltrip: 01:38:00<br>sun_span: 22:07:00<br>sun_trip_freq: 75<br>Shape__Length: 55130.0283013023]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -18887,7 +18652,7 @@
       <Placemark>
         <name>87</name>
         <description><![CDATA[description: <br>OBJECTID: 140<br>route: 87<br>routesort: 87<br>RouteDescription: Rosedale - U of M St Paul - Cleveland - Highland<br>RouteOperator: P<br>EffectiveDate: 2026/03/14 00:00:00+00<br>payleavedirectionid: 0<br>routepayleave: 0<br>RouteClass: SupportLoc<br>IsPublic: 1<br>wk_ftrip: 04:59:00<br>wk_ltrip: 22:58:00<br>wk_span: 17:59:00<br>wk_trip_freq: 62<br>sat_ftrip: 05:34:00<br>sat_ltrip: 22:52:00<br>sat_span: 17:18:00<br>sat_trip_freq: 65<br>sun_ftrip: 05:39:00<br>sun_ltrip: 21:24:00<br>sun_span: 15:45:00<br>sun_trip_freq: 32<br>Shape__Length: 33618.8104242375]]></description>
-        <styleUrl>#line-E65100-1200</styleUrl>
+        <styleUrl>#line-E65100-3519</styleUrl>
         <ExtendedData>
           <Data name="description">
             <value/>
@@ -20895,6 +20660,219 @@
             </coordinates>
           </LineString>
         </MultiGeometry>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>grocery_stores.csv</name>
+      <Placemark>
+        <name><![CDATA[Kowalski's Markets]]></name>
+        <address>1261 Grand Ave, St Paul, MN 55105</address>
+        <description><![CDATA[address: 1261 Grand Ave, St Paul, MN 55105<br>description: Full-service upscale grocer with butcher, bakery, deli, and Starbucks]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>1261 Grand Ave, St Paul, MN 55105</value>
+          </Data>
+          <Data name="description">
+            <value>Full-service upscale grocer with butcher, bakery, deli, and Starbucks</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Trader Joe's]]></name>
+        <address>484 Lexington Pkwy S, St Paul, MN 55105</address>
+        <description><![CDATA[address: 484 Lexington Pkwy S, St Paul, MN 55105<br>description: Specialty grocer with strong organic and prepared foods selection]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>484 Lexington Pkwy S, St Paul, MN 55105</value>
+          </Data>
+          <Data name="description">
+            <value>Specialty grocer with strong organic and prepared foods selection</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Oxendale's Market]]></name>
+        <address>1326 Randolph Ave, St Paul, MN 55105</address>
+        <description><![CDATA[address: 1326 Randolph Ave, St Paul, MN 55105<br>description: Independent neighborhood grocer with excellent meat counter]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>1326 Randolph Ave, St Paul, MN 55105</value>
+          </Data>
+          <Data name="description">
+            <value>Independent neighborhood grocer with excellent meat counter</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Mississippi Market Co-op</name>
+        <address>622 Selby Ave, St Paul, MN 55104</address>
+        <description><![CDATA[address: 622 Selby Ave, St Paul, MN 55104<br>description: Natural foods co-op on Selby Ave]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>622 Selby Ave, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Natural foods co-op on Selby Ave</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Whole Foods Market</name>
+        <address>1575 Selby Ave, St Paul, MN 55104</address>
+        <description><![CDATA[address: 1575 Selby Ave, St Paul, MN 55104<br>description: Premium natural foods grocer near Snelling Ave]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>1575 Selby Ave, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Premium natural foods grocer near Snelling Ave</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>ALDI</name>
+        <address>1134 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 1134 University Ave W, St Paul, MN 55104<br>description: Budget discount grocer on the Green Line]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>1134 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Budget discount grocer on the Green Line</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Target</name>
+        <address>1300 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 1300 University Ave W, St Paul, MN 55104<br>description: Large-format Target with full grocery section on the Green Line]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>1300 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Large-format Target with full grocery section on the Green Line</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Shuang Hur Supermarket</name>
+        <address>654 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 654 University Ave W, St Paul, MN 55104<br>description: Large pan-Asian grocery with exceptional seafood and produce]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>654 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Large pan-Asian grocery with exceptional seafood and produce</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Phil Oriental Imports</name>
+        <address>789 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 789 University Ave W, St Paul, MN 55104<br>description: Filipino grocery and deli with weekend buffet]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>789 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Filipino grocery and deli with weekend buffet</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Choua's Market]]></name>
+        <address>995 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 995 University Ave W, St Paul, MN 55104<br>description: Small Hmong grocery with dry goods, snacks, and frozen items]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>995 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Small Hmong grocery with dry goods, snacks, and frozen items</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Mi Linda Tierra</name>
+        <address>461 University Ave W, St Paul, MN 55103</address>
+        <description><![CDATA[address: 461 University Ave W, St Paul, MN 55103<br>description: Peruvian and Latin specialty grocery with imported ingredients]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>461 University Ave W, St Paul, MN 55103</value>
+          </Data>
+          <Data name="description">
+            <value>Peruvian and Latin specialty grocery with imported ingredients</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Ashama Grocery & Meat]]></name>
+        <address>804 University Ave W, St Paul, MN 55104</address>
+        <description><![CDATA[address: 804 University Ave W, St Paul, MN 55104<br>description: East African grocery and butcher with deli counter]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>804 University Ave W, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>East African grocery and butcher with deli counter</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Addis Market</name>
+        <address>515 Snelling Ave N, St Paul, MN 55104</address>
+        <description><![CDATA[address: 515 Snelling Ave N, St Paul, MN 55104<br>description: Ethiopian grocery specializing in spices, injera, teff, and coffee]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>515 Snelling Ave N, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>Ethiopian grocery specializing in spices, injera, teff, and coffee</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[St Paul Grocery & Halal Market]]></name>
+        <address>470 Lexington Pkwy N, St Paul, MN 55104</address>
+        <description><![CDATA[address: 470 Lexington Pkwy N, St Paul, MN 55104<br>description: African and Halal grocery with lamb, injera, ghee, and spices]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>470 Lexington Pkwy N, St Paul, MN 55104</value>
+          </Data>
+          <Data name="description">
+            <value>African and Halal grocery with lamb, injera, ghee, and spices</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark>
+        <name>Golden Fig Fine Foods</name>
+        <address>794 Grand Ave, St Paul, MN 55105</address>
+        <description><![CDATA[address: 794 Grand Ave, St Paul, MN 55105<br>description: Gourmet grocery store with artisan foods, baked goods, cookbooks & a locavore philosophy.]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="address">
+            <value>794 Grand Ave, St Paul, MN 55105</value>
+          </Data>
+          <Data name="description">
+            <value><![CDATA[Gourmet grocery store with artisan foods, baked goods, cookbooks & a locavore philosophy.]]></value>
+          </Data>
+        </ExtendedData>
       </Placemark>
     </Folder>
   </Document>
