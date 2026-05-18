@@ -50,6 +50,10 @@
   .grocery-leader { stroke: #9ca3af; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
   .key-label { font-size: 11px; font-weight: 400; fill: #111827; }
   .key-heading { font-size: 11px; font-weight: 600; fill: #4b5563; letter-spacing: 0.8px; }
+  .route-line { stroke-width: 6; stroke-linecap: round; }
+  .street-line { stroke: #000000; stroke-width: 0.5; }
+  .store-point { fill: #F9C846; stroke: #1a1a1a; stroke-width: 1.2; }
+  .label-box { fill: #F9C846; stroke: #8B6914; stroke-width: 0.7; }
 </style>
 </defs>
 
@@ -65,92 +69,83 @@
 <line x1="80" y1="110" x2="80" y2="650"/>
 <line x1="880" y1="110" x2="880" y2="650"/>
 
+<!-- Street lines - no transit route -->
+<line class="street-line" x1="270" y1="150" x2="270" y2="610"/>
+<line class="street-line" x1="570" y1="150" x2="570" y2="610"/>
+<line class="street-line" x1="850" y1="150" x2="850" y2="610"/>
+
 <!-- Route lines -->
-<line x1="120" y1="150" x2="120" y2="610" stroke="#FFC424" stroke-width="7" stroke-linecap="round"/>
-<line x1="420" y1="150" x2="420" y2="610" stroke="#8B5A3C" stroke-width="5" stroke-linecap="round"/>
-<line x1="720" y1="150" x2="720" y2="610" stroke="#00A0AF" stroke-width="5" stroke-linecap="round"/>
-<line x1="120" y1="303" x2="850" y2="303" stroke="#E91E63" stroke-width="5" stroke-linecap="round"/>
-<line x1="120" y1="310" x2="850" y2="310" stroke="#0078C9" stroke-width="7" stroke-linecap="round"/>
-<line x1="120" y1="150" x2="850" y2="150" stroke="#00843D" stroke-width="7" stroke-linecap="round"/>
-<line x1="120" y1="470" x2="850" y2="470" stroke="#F26822" stroke-width="6" stroke-linecap="round"/>
-<line x1="120" y1="610" x2="850" y2="610" stroke="#7B519C" stroke-width="6" stroke-linecap="round"/>
+<line class="route-line" x1="120" y1="150" x2="120" y2="610" stroke="#FFC424"/>
+<line class="route-line" x1="420" y1="150" x2="420" y2="610" stroke="#8B5A3C"/>
+<line class="route-line" x1="720" y1="150" x2="720" y2="610" stroke="#00A0AF"/>
+<line class="route-line" x1="120" y1="306" x2="850" y2="306" stroke="#E91E63"/>
+<line class="route-line" x1="120" y1="314" x2="850" y2="314" stroke="#0078C9"/>
+<line class="route-line" x1="120" y1="150" x2="850" y2="150" stroke="#00843D"/>
+<line class="route-line" x1="120" y1="470" x2="850" y2="470" stroke="#F26822"/>
+<line class="route-line" x1="120" y1="610" x2="850" y2="610" stroke="#7B519C"/>
 
 <!-- Grocery stores - amber with dark outline -->
-<circle cx="270" cy="150" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="420" cy="150" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="500" cy="150" r="4.5"   fill="#F9C846" stroke="#1a1a1a" stroke-width="1.1"/>
-<circle cx="570" cy="150" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="605" cy="150" r="4.5"   fill="#F9C846" stroke="#1a1a1a" stroke-width="1.1"/>
-<circle cx="720" cy="150" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="780" cy="150" r="4.5"   fill="#F9C846" stroke="#1a1a1a" stroke-width="1.1"/>
-<circle cx="850" cy="150" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="120" cy="310" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="720" cy="310" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="270" cy="470" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="570" cy="470" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="270" cy="610" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
-<circle cx="420" cy="610" r="4.5" fill="#F9C846" stroke="#1a1a1a" stroke-width="1.2"/>
+<circle class="store-point" cx="270" cy="150" r="4.5"/>
+<circle class="store-point" cx="420" cy="150" r="4.5"/>
+<circle class="store-point" cx="500" cy="150" r="4.5"/>
+<circle class="store-point" cx="570" cy="150" r="4.5"/>
+<circle class="store-point" cx="605" cy="150" r="4.5"/>
+<circle class="store-point" cx="720" cy="150" r="4.5"/>
+<circle class="store-point" cx="780" cy="150" r="4.5"/>
+<circle class="store-point" cx="850" cy="150" r="4.5"/>
+<circle class="store-point" cx="120" cy="310" r="4.5"/>
+<circle class="store-point" cx="720" cy="310" r="4.5"/>
+<circle class="store-point" cx="270" cy="470" r="4.5"/>
+<circle class="store-point" cx="570" cy="470" r="4.5"/>
+<circle class="store-point" cx="270" cy="610" r="4.5"/>
+<circle class="store-point" cx="420" cy="610" r="4.5"/>
 
 <!-- Grocery labels - UNIVERSITY -->
-<line x1="270" y1="142" x2="270" y2="109" class="grocery-leader"/>
-<rect x="240" y="109" width="60" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="240" y="109" width="60" height="20" rx="3"/>
 <text class="grocery-name" x="270" y="123" text-anchor="middle">Target</text>
 
-<line x1="420" y1="142" x2="420" y2="109" class="grocery-leader"/>
-<rect x="395" y="109" width="50" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="395" y="109" width="50" height="20" rx="3"/>
 <text class="grocery-name" x="420" y="123" text-anchor="middle">ALDI</text>
-<rect x="370" y="86" width="100" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="370" y="86" width="100" height="20" rx="3"/>
 <text class="grocery-name" x="420" y="100" text-anchor="middle">St Paul Halal Mkt</text>
 
-<line x1="500" y1="158" x2="500" y2="165" class="grocery-leader"/>
-<rect x="468" y="165" width="64" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="468" y="165" width="64" height="20" rx="3"/>
 <text class="grocery-name" x="500" y="179" text-anchor="middle">Choua's</text>
 
-<line x1="570" y1="142" x2="570" y2="109" class="grocery-leader"/>
-<rect x="534" y="109" width="72" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="534" y="109" width="72" height="20" rx="3"/>
 <text class="grocery-name" x="570" y="123" text-anchor="middle">Ashama</text>
 
-<line x1="605" y1="158" x2="605" y2="165" class="grocery-leader"/>
-<rect x="565" y="165" width="80" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="565" y="165" width="80" height="20" rx="3"/>
 <text class="grocery-name" x="605" y="179" text-anchor="middle">Phil Oriental</text>
 
-<line x1="720" y1="142" x2="720" y2="109" class="grocery-leader"/>
-<rect x="682" y="109" width="76" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="682" y="109" width="76" height="20" rx="3"/>
 <text class="grocery-name" x="720" y="123" text-anchor="middle">Shuang Hur</text>
 
-<line x1="780" y1="158" x2="780" y2="165" class="grocery-leader"/>
-<rect x="748" y="165" width="68" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="748" y="165" width="68" height="20" rx="3"/>
 <text class="grocery-name" x="782" y="179" text-anchor="middle">Sun Foods</text>
 
-<line x1="850" y1="142" x2="850" y2="109" class="grocery-leader"/>
-<rect x="810" y="109" width="80" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="810" y="109" width="80" height="20" rx="3"/>
 <text class="grocery-name" x="850" y="123" text-anchor="middle">Mi Linda Tierra</text>
 
 <!-- Grocery labels - SELBY-->
-<line x1="120" y1="318" x2="120" y2="328" class="grocery-leader"/>
-<rect x="84" y="328" width="84" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="84" y="328" width="84" height="20" rx="3"/>
 <text class="grocery-name" x="126" y="342" text-anchor="middle">Whole Foods</text>
 
-<line x1="720" y1="318" x2="720" y2="328" class="grocery-leader"/>
-<rect x="660" y="328" width="120" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="660" y="328" width="120" height="20" rx="3"/>
 <text class="grocery-name" x="720" y="342" text-anchor="middle">Mississippi Market</text>
 
 <!-- Grocery labels - GRAND -->
-<line x1="270" y1="478" x2="270" y2="488" class="grocery-leader"/>
-<rect x="232" y="488" width="80" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="232" y="488" width="80" height="20" rx="3"/>
 <text class="grocery-name" x="272" y="502" text-anchor="middle">Kowalski's</text>
 
-<line x1="570" y1="478" x2="570" y2="488" class="grocery-leader"/>
-<rect x="530" y="488" width="80" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="530" y="488" width="80" height="20" rx="3"/>
 <text class="grocery-name" x="570" y="502" text-anchor="middle">Golden Fig</text>
 
 <!-- Grocery labels - RANDOLPH -->
-<line x1="270" y1="602" x2="270" y2="593" class="grocery-leader"/>
-<rect x="232" y="573" width="80" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="232" y="573" width="80" height="20" rx="3"/>
 <text class="grocery-name" x="272" y="587" text-anchor="middle">Oxendale's</text>
 
-<line x1="420" y1="602" x2="420" y2="593" class="grocery-leader"/>
-<rect x="378" y="573" width="86" height="20" rx="3" fill="#F9C846" stroke="#8B6914" stroke-width="0.7"/>
+<rect class="label-box" x="378" y="573" width="86" height="20" rx="3"/>
 <text class="grocery-name" x="422" y="587" text-anchor="middle">Trader Joe's</text>
 
 <!-- Horizontal street labels -->
@@ -171,34 +166,34 @@
 <text class="key-heading" x="40" y="688">ROUTES</text>
 
 <g transform="translate(110, 684)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#00843D" stroke-width="6" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"/>
   <text class="key-label" x="30" y="4">Green Line LRT · University</text>
 </g>
 <g transform="translate(370, 684)">
-  <line x1="0" y1="-3" x2="22" y2="-3" stroke="#0078C9" stroke-width="6" stroke-linecap="round"/>
-  <line x1="0" y1="3" x2="22" y2="3" stroke="#E91E63" stroke-width="4" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="-2" x2="22" y2="-2" stroke="#0078C9"/>
+  <line class="route-line" x1="0" y1="5" x2="22" y2="5" stroke="#E91E63"/>
   <text class="key-label" x="30" y="4">B Line BRT &amp; Route 72 · Selby</text>
 </g>
 <g transform="translate(620, 684)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#FFC424" stroke-width="6" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#FFC424"/>
   <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
 </g>
 
 <g transform="translate(110, 702)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#F26822" stroke-width="5" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#F26822"/>
   <text class="key-label" x="30" y="4">Route 63 · Grand</text>
 </g>
 <g transform="translate(370, 702)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#8B5A3C" stroke-width="5" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#8B5A3C"/>
   <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
 </g>
 <g transform="translate(620, 702)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF" stroke-width="5" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"/>
   <text class="key-label" x="30" y="4">Route 65 · Dale</text>
 </g>
 
 <g transform="translate(110, 720)">
-  <line x1="0" y1="0" x2="22" y2="0" stroke="#7B519C" stroke-width="5" stroke-linecap="round"/>
+  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"/>
   <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
 </g>
 
