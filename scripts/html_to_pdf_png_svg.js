@@ -16,6 +16,7 @@ const baseName = path.basename(htmlFile, '.html');
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1840, height: 1520 } });
   await page.goto('file://' + path.resolve(htmlFile));
+  await page.evaluate(() => document.querySelectorAll('a.dl-link').forEach(el => el.remove()));
   await page.screenshot({ path: `${outputDir}/${baseName}.png`, fullPage: true, omitBackground: false });
   await page.pdf({ path: `${outputDir}/${baseName}.pdf`, width: '1840px', height: '1520px', printBackground: true });
 
