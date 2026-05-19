@@ -25,3 +25,6 @@ artifacts/<area>/user_maps is where the html, pdf, png, and svg files are stored
 
 ## Cloudflare Pages deployment
 [Cloudflare Pages](https://pages.cloudflare.com/) provides free, cached hosting for projects displaying static assets. See wrangler.jsonc if you want to change what is displayed. 
+
+    npx wrangler deploy
+
