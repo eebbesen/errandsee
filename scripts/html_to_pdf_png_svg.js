@@ -3,14 +3,15 @@ const path = require('path');
 const fs = require('fs');
 
 const htmlFile = process.argv[2];
-const outputDir = process.argv[3];
 
-if (!htmlFile || !outputDir) {
-  console.error('Usage: node html_to_pdf_png.js <file.html> <output_dir>');
+if (!htmlFile) {
+  console.error('Usage: node html_to_pdf_png_svg.js <file.html>');
   process.exit(1);
 }
 
-const baseName = path.basename(htmlFile, '.html');
+const outputDir = path.dirname(path.resolve(htmlFile));
+
+const baseName = path.basename(path.dirname(path.dirname(path.resolve(htmlFile))));
 
 (async () => {
   const browser = await chromium.launch();
