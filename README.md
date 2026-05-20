@@ -11,13 +11,11 @@ If running the script to convert html to pdf/png node package [Playwright](https
 
 ## Scripts
 
-scripts/html_to_pdf_png_svg.js will convert an html file to pdf, png, and svg formats. It takes two parameters
-* html file to convert
-* destination of converted files
+scripts/html_to_pdf_png_svg.js will convert an html file to pdf, png, and svg formats. It takes one parameter, the location of the html file to convert.
 
 To run this 
 
-    node html_to_pdf_png_svg.js <file.html> <output_dir>
+    node scripts/html_to_pdf_png_svg.js <path/to/index.html>
 
 ## Structure
 
@@ -31,4 +29,3 @@ In the above, `<area>` represents a geography, e.g., snel-west-rand-uni, that I'
 [Cloudflare Pages](https://pages.cloudflare.com/) provides free, cached hosting for projects displaying static assets. See wrangler.jsonc if you want to change what is displayed. 
 
     npx wrangler deploy
-
