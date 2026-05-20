@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saint Paul Transit & Grocery Tube Map</title>
+<link rel="icon" href="favicon.png">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   body {
@@ -34,35 +35,13 @@
     font-size: 12px;
     text-align: center;
   }
-  .downloads {
-    max-width: 920px;
-    width: 100%;
-    margin-top: 12px;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .downloads a {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 6px;
-    background: #ffffff;
-    border: 1px solid #d1d5db;
-    color: #374151;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  }
-  .downloads a:hover { background: #f9fafb; border-color: #9ca3af; }
 </style>
 </head>
 <body>
 <div class="wrap">
 <svg viewBox="0 0 920 760" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>Saint Paul transit and grocery map, Snelling to Western, Randolph to University</title>
-<desc>A schematic map of Metro Transit routes bounded by Snelling Avenue on the west, Western Avenue on the east, Randolph Avenue on the south, and University Avenue on the north.</desc>
+<desc>A Lschematic map of Metro Transit routes bounded by Snelling Avenue on the west, Western Avenue on the east, Randolph Avenue on the south, and University Avenue on the north.</desc>
 
 <defs>
 <style>
@@ -79,6 +58,16 @@
   .street-line { stroke: #000000; stroke-width: 0.5; }
   .store-point { fill: #F9C846; stroke: #1a1a1a; stroke-width: 1.2; }
   .label-box { fill: #F9C846; stroke: #8B6914; stroke-width: 0.7; }
+  .dl-btn-pdf { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
+  .dl-btn-pdf:hover { fill: #C7D2FE; }
+  .dl-btn-png { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
+  .dl-btn-png:hover { fill: #C7D2FE; }
+  .dl-btn-svg { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
+  .dl-btn-svg:hover { fill: #C7D2FE; }
+  .dl-label-pdf { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
+  .dl-label-png { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
+  .dl-label-svg { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
+  a.dl-link { cursor: pointer; }
 </style>
 </defs>
 
@@ -87,6 +76,20 @@
 <!-- Title -->
 <text class="title" x="40" y="42">Transit to groceries</text>
 <text class="subtitle" x="40" y="60">Snelling to Western · Randolph to University</text>
+
+<!-- Download buttons -->
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.pdf" download>
+  <rect class="dl-btn-pdf" x="636" y="35" width="76" height="28" rx="6"/>
+  <text class="dl-label-pdf" x="674" y="54" text-anchor="middle">PDF</text>
+</a>
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.png" download>
+  <rect class="dl-btn-png" x="720" y="35" width="76" height="28" rx="6"/>
+  <text class="dl-label-png" x="758" y="54" text-anchor="middle">PNG</text>
+</a>
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.svg" download>
+  <rect class="dl-btn-svg" x="804" y="35" width="76" height="28" rx="6"/>
+  <text class="dl-label-svg" x="842" y="54" text-anchor="middle">SVG</text>
+</a>
 
 <!-- Boundary frame -->
 <line x1="40" y1="110" x2="880" y2="110"/>
@@ -103,7 +106,8 @@
 <line class="route-line" x1="120" y1="150" x2="120" y2="610" stroke="#FFC424"/>
 <line class="route-line" x1="420" y1="150" x2="420" y2="610" stroke="#8B5A3C"/>
 <line class="route-line" x1="720" y1="150" x2="720" y2="610" stroke="#00A0AF"/>
-<line class="route-line" x1="120" y1="306" x2="850" y2="306" stroke="#E91E63"/>
+<line class="route-line" x1="270" y1="306" x2="850" y2="306" stroke="#E91E63"/>
+<line class="route-line" x1="270" y1="150" x2="270" y2="306" stroke="#E91E63"/>
 <line class="route-line" x1="120" y1="314" x2="850" y2="314" stroke="#0078C9"/>
 <line class="route-line" x1="120" y1="150" x2="850" y2="150" stroke="#00843D"/>
 <line class="route-line" x1="120" y1="470" x2="850" y2="470" stroke="#F26822"/>
@@ -223,12 +227,8 @@
 </g>
 
 </svg>
+
 </div>
 <footer>Not to geographic scale</footer>
-<div class="downloads">
-  <a href="saint_paul_snel-west-rand-uni.pdf" download>Download PDF</a>
-  <a href="saint_paul_snel-west-rand-uni.png" download>Download PNG</a>
-  <a href="saint_paul_snel-west-rand-uni.svg" download>Download SVG</a>
-</div>
 </body>
 </html>
