@@ -15,6 +15,8 @@ scripts/html_to_pdf_png_svg.js will convert an html file to pdf, png, and svg fo
 * html file to convert
 * destination of converted files
 
+To run this 
+
     node html_to_pdf_png_svg.js <file.html> <output_dir>
 
 ## Structure
