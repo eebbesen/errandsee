@@ -31,7 +31,7 @@
     max-width: 920px;
     width: 100%;
     margin-top: 12px;
-    color: #6b7280;
+    color: #4b5563;
     font-size: 12px;
     text-align: center;
   }
@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="wrap">
-<svg viewBox="0 0 920 760" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 920 760" xmlns="http://www.w3.org/2000/svg">
 <title>Saint Paul transit and grocery map, Snelling to Western, Randolph to University</title>
 <desc>A schematic map of Metro Transit routes bounded by Snelling Avenue on the west, Western Avenue on the east, Randolph Avenue on the south, and University Avenue on the north.</desc>
 
@@ -68,6 +68,7 @@
   .dl-label-png { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
   .dl-label-svg { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
   a.dl-link { cursor: pointer; }
+  a.dl-link:focus-visible { outline: 3px solid #312E81; outline-offset: 3px; border-radius: 6px; }
 </style>
 </defs>
 
@@ -78,15 +79,15 @@
 <text class="subtitle" x="40" y="60">Snelling to Western · Randolph to University</text>
 
 <!-- Download buttons -->
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.pdf" download>
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.pdf" download aria-label="Download PDF">
   <rect class="dl-btn-pdf" x="636" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-pdf" x="674" y="54" text-anchor="middle">PDF</text>
 </a>
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.png" download>
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.png" download aria-label="Download PNG">
   <rect class="dl-btn-png" x="720" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-png" x="758" y="54" text-anchor="middle">PNG</text>
 </a>
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.svg" download>
+<a class="dl-link" href="saint_paul_snel-west-rand-uni.svg" download aria-label="Download SVG">
   <rect class="dl-btn-svg" x="804" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-svg" x="842" y="54" text-anchor="middle">SVG</text>
 </a>
