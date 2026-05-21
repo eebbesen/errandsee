@@ -4,7 +4,7 @@
   "description": "Helping neighbors understand convenient transit options",
   "main": "index.js",
   "scripts": {
-    "test": "node --test --test-reporter=spec scripts/*.test.js"
+    "test": "node --test --test-reporter=spec --experimental-test-coverage scripts/*.test.js"
   },
   "repository": {
     "type": "git",
