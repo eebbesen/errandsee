@@ -21,6 +21,10 @@ Tests use Node's built-in test runner — no additional dependencies required.
 
     npm test
 
+To generage html coverage run the following and find the results in the coverage directory
+
+    npm run coverage
+
 ## Structure
 
 `artifacts/<area>/` contains files for a specific area. I've included csv, txt, md, and kml files relevant to the area. Typically these are what I'll use in conjunction with Google Maps and an AI tool to generate the HTML version of the map.
