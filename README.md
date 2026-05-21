@@ -17,8 +17,6 @@ scripts/html_to_pdf_png_svg.js will convert an html file to pdf, png, and svg fo
 
 ## Testing
 
-Tests use Node's built-in test runner — no additional dependencies required.
-
     npm test
 
 To generage html coverage run the following and find the results in the coverage directory
