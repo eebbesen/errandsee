@@ -13,9 +13,13 @@ If running the script to convert html to pdf/png node package [Playwright](https
 
 scripts/html_to_pdf_png_svg.js will convert an html file to pdf, png, and svg formats. It takes one parameter, the location of the html file to convert.
 
-To run this 
+    node scripts/html_to_pdf_png_svg.js <area>
 
-    node scripts/html_to_pdf_png_svg.js <path/to/index.html>
+## Testing
+
+Tests use Node's built-in test runner — no additional dependencies required.
+
+    npm test
 
 ## Structure
 

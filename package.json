@@ -4,7 +4,7 @@
   "description": "Helping neighbors understand convenient transit options",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test --test-reporter=spec scripts/*.test.js"
   },
   "repository": {
     "type": "git",
