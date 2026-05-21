@@ -4,7 +4,9 @@
   "description": "Helping neighbors understand convenient transit options",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test --test-reporter=spec --experimental-test-coverage scripts/*.test.js",
+    "coverage": "c8 --reporter=html node --test scripts/*.test.js",
+    "coverage_open": "c8 --reporter=html node --test scripts/*.test.js && open coverage/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/eebbesen/errandsee#readme",
   "dependencies": {
     "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3"
   }
 }
