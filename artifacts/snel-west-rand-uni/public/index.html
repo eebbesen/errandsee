@@ -59,6 +59,21 @@
   .street-line { stroke: #000000; stroke-width: 0.5; }
   .store-point { fill: #F9C846; stroke: #1a1a1a; stroke-width: 1.2; }
   .label-box { fill: #F9C846; stroke: #8B6914; stroke-width: 0.7; }
+  .store { cursor: pointer; }
+  .store-point, .store-label {
+    transition: transform 0.15s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .store:hover .store-point,
+  .store:hover .store-label { transform: scale(1.4); }
+  .store-labels {
+    transition: transform 0.15s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .store:hover .store-labels { transform: scale(1.4); }
+  .store:hover .store-labels .store-label { transform: none; }
   .dl-btn-pdf { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
   .dl-btn-pdf:hover { fill: #C7D2FE; }
   .dl-btn-png { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
@@ -142,69 +157,79 @@
 <rect x="534" y="603" width="22" height="14" rx="4" fill="#7B519C"/>
 <text x="545" y="614" text-anchor="middle" font-size="9" font-weight="800" fill="#ffffff">74</text>
 
-<!-- Grocery stores - amber with dark outline -->
-<circle class="store-point" cx="270" cy="150" r="4.5"/>
-<circle class="store-point" cx="420" cy="150" r="4.5"/>
-<circle class="store-point" cx="500" cy="150" r="4.5"/>
-<circle class="store-point" cx="570" cy="150" r="4.5"/>
-<circle class="store-point" cx="605" cy="150" r="4.5"/>
-<circle class="store-point" cx="720" cy="150" r="4.5"/>
-<circle class="store-point" cx="780" cy="150" r="4.5"/>
-<circle class="store-point" cx="850" cy="150" r="4.5"/>
-<circle class="store-point" cx="120" cy="310" r="4.5"/>
-<circle class="store-point" cx="720" cy="310" r="4.5"/>
-<circle class="store-point" cx="270" cy="470" r="4.5"/>
-<circle class="store-point" cx="570" cy="470" r="4.5"/>
-<circle class="store-point" cx="270" cy="610" r="4.5"/>
-<circle class="store-point" cx="420" cy="610" r="4.5"/>
+<!-- Grocery stores -->
+<g class="store">
+  <circle class="store-point" cx="270" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="240" y="109" width="60" height="20" rx="3"/><text class="grocery-name" x="270" y="123" text-anchor="middle">Target</text></g>
+</g>
 
-<!-- Grocery labels - UNIVERSITY -->
-<rect class="label-box" x="240" y="109" width="60" height="20" rx="3"/>
-<text class="grocery-name" x="270" y="123" text-anchor="middle">Target</text>
+<g class="store">
+  <circle class="store-point" cx="420" cy="150" r="4.5"/>
+  <g class="store-labels">
+    <g class="store-label"><rect class="label-box" x="395" y="109" width="50" height="20" rx="3"/><text class="grocery-name" x="420" y="123" text-anchor="middle">ALDI</text></g>
+    <g class="store-label"><rect class="label-box" x="370" y="86" width="100" height="20" rx="3"/><text class="grocery-name" x="420" y="100" text-anchor="middle">St Paul Halal Mkt</text></g>
+  </g>
+</g>
 
-<rect class="label-box" x="395" y="109" width="50" height="20" rx="3"/>
-<text class="grocery-name" x="420" y="123" text-anchor="middle">ALDI</text>
-<rect class="label-box" x="370" y="86" width="100" height="20" rx="3"/>
-<text class="grocery-name" x="420" y="100" text-anchor="middle">St Paul Halal Mkt</text>
+<g class="store">
+  <circle class="store-point" cx="500" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="468" y="165" width="64" height="20" rx="3"/><text class="grocery-name" x="500" y="179" text-anchor="middle">Choua's</text></g>
+</g>
 
-<rect class="label-box" x="468" y="165" width="64" height="20" rx="3"/>
-<text class="grocery-name" x="500" y="179" text-anchor="middle">Choua's</text>
+<g class="store">
+  <circle class="store-point" cx="570" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="534" y="109" width="72" height="20" rx="3"/><text class="grocery-name" x="570" y="123" text-anchor="middle">Ashama</text></g>
+</g>
 
-<rect class="label-box" x="534" y="109" width="72" height="20" rx="3"/>
-<text class="grocery-name" x="570" y="123" text-anchor="middle">Ashama</text>
+<g class="store">
+  <circle class="store-point" cx="605" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="565" y="165" width="80" height="20" rx="3"/><text class="grocery-name" x="605" y="179" text-anchor="middle">Phil Oriental</text></g>
+</g>
 
-<rect class="label-box" x="565" y="165" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="605" y="179" text-anchor="middle">Phil Oriental</text>
+<g class="store">
+  <circle class="store-point" cx="720" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="682" y="109" width="76" height="20" rx="3"/><text class="grocery-name" x="720" y="123" text-anchor="middle">Shuang Hur</text></g>
+</g>
 
-<rect class="label-box" x="682" y="109" width="76" height="20" rx="3"/>
-<text class="grocery-name" x="720" y="123" text-anchor="middle">Shuang Hur</text>
+<g class="store">
+  <circle class="store-point" cx="780" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="748" y="165" width="68" height="20" rx="3"/><text class="grocery-name" x="782" y="179" text-anchor="middle">Sun Foods</text></g>
+</g>
 
-<rect class="label-box" x="748" y="165" width="68" height="20" rx="3"/>
-<text class="grocery-name" x="782" y="179" text-anchor="middle">Sun Foods</text>
+<g class="store">
+  <circle class="store-point" cx="850" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="810" y="109" width="80" height="20" rx="3"/><text class="grocery-name" x="850" y="123" text-anchor="middle">Mi Linda Tierra</text></g>
+</g>
 
-<rect class="label-box" x="810" y="109" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="850" y="123" text-anchor="middle">Mi Linda Tierra</text>
+<g class="store">
+  <circle class="store-point" cx="120" cy="310" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="84" y="328" width="84" height="20" rx="3"/><text class="grocery-name" x="126" y="342" text-anchor="middle">Whole Foods</text></g>
+</g>
 
-<!-- Grocery labels - SELBY-->
-<rect class="label-box" x="84" y="328" width="84" height="20" rx="3"/>
-<text class="grocery-name" x="126" y="342" text-anchor="middle">Whole Foods</text>
+<g class="store">
+  <circle class="store-point" cx="720" cy="310" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="660" y="328" width="120" height="20" rx="3"/><text class="grocery-name" x="720" y="342" text-anchor="middle">Mississippi Market</text></g>
+</g>
 
-<rect class="label-box" x="660" y="328" width="120" height="20" rx="3"/>
-<text class="grocery-name" x="720" y="342" text-anchor="middle">Mississippi Market</text>
+<g class="store">
+  <circle class="store-point" cx="270" cy="470" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="232" y="488" width="80" height="20" rx="3"/><text class="grocery-name" x="272" y="502" text-anchor="middle">Kowalski's</text></g>
+</g>
 
-<!-- Grocery labels - GRAND -->
-<rect class="label-box" x="232" y="488" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="272" y="502" text-anchor="middle">Kowalski's</text>
+<g class="store">
+  <circle class="store-point" cx="570" cy="470" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="530" y="488" width="80" height="20" rx="3"/><text class="grocery-name" x="570" y="502" text-anchor="middle">Golden Fig</text></g>
+</g>
 
-<rect class="label-box" x="530" y="488" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="570" y="502" text-anchor="middle">Golden Fig</text>
+<g class="store">
+  <circle class="store-point" cx="270" cy="610" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="232" y="573" width="80" height="20" rx="3"/><text class="grocery-name" x="272" y="587" text-anchor="middle">Oxendale's</text></g>
+</g>
 
-<!-- Grocery labels - RANDOLPH -->
-<rect class="label-box" x="232" y="573" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="272" y="587" text-anchor="middle">Oxendale's</text>
-
-<rect class="label-box" x="378" y="573" width="86" height="20" rx="3"/>
-<text class="grocery-name" x="422" y="587" text-anchor="middle">Trader Joe's</text>
+<g class="store">
+  <circle class="store-point" cx="420" cy="610" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="378" y="573" width="86" height="20" rx="3"/><text class="grocery-name" x="422" y="587" text-anchor="middle">Trader Joe's</text></g>
+</g>
 
 <!-- Horizontal street labels -->
 <text class="streetlabel" x="135" y="137">UNIVERSITY</text>
