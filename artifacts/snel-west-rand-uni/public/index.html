@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Saint Paul Transit & Grocery Tube Map</title>
+<title>Saint Paul Transit to Grocery Map</title>
 <link rel="icon" href="favicon.png">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
@@ -39,9 +39,8 @@
 </head>
 <body>
 <div class="wrap">
-<svg viewBox="0 0 920 760" xmlns="http://www.w3.org/2000/svg">
-<title>Saint Paul transit and grocery map, Snelling to Western, Randolph to University</title>
-<desc>A schematic map of Metro Transit routes bounded by Snelling Avenue on the west, Western Avenue on the east, Randolph Avenue on the south, and University Avenue on the north.</desc>
+<svg viewBox="0 0 920 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saint Paul transit and grocery map, Snelling to Western, University to Randolph">
+<desc>A schematic map of Metro Transit routes bounded by Snelling Avenue on the west, Western Avenue on the east, University Avenue on the north, and Randolph Avenue on the south.</desc>
 
 <defs>
 <style>
@@ -55,9 +54,26 @@
   .key-label { font-size: 11px; font-weight: 400; fill: #111827; }
   .key-heading { font-size: 11px; font-weight: 600; fill: #4b5563; letter-spacing: 0.8px; }
   .route-line { stroke-width: 6; stroke-linecap: round; }
+  .route-line:hover { stroke-width: 8.4; cursor: pointer; }
+  #route-72:hover .route-line { stroke-width: 8.4; cursor: pointer; }
   .street-line { stroke: #000000; stroke-width: 0.5; }
   .store-point { fill: #F9C846; stroke: #1a1a1a; stroke-width: 1.2; }
   .label-box { fill: #F9C846; stroke: #8B6914; stroke-width: 0.7; }
+  .store { cursor: pointer; }
+  .store-point, .store-label {
+    transition: transform 0.15s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .store:hover .store-point,
+  .store:hover .store-label { transform: scale(1.4); }
+  .store-labels {
+    transition: transform 0.15s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .store:hover .store-labels { transform: scale(1.4); }
+  .store:hover .store-labels .store-label { transform: none; }
   .dl-btn-pdf { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
   .dl-btn-pdf:hover { fill: #C7D2FE; }
   .dl-btn-png { fill: #E0E7FF; stroke: #C7D2FE; stroke-width: 1; }
@@ -76,7 +92,7 @@
 
 <!-- Title -->
 <text class="title" x="40" y="42">Transit to groceries</text>
-<text class="subtitle" x="40" y="60">Snelling to Western · Randolph to University</text>
+<text class="subtitle" x="40" y="60">Snelling to Western · University to Randolph</text>
 
 <!-- Download buttons -->
 <a class="dl-link" href="saint_paul_snel-west-rand-uni.pdf" download aria-label="Download PDF">
@@ -107,8 +123,10 @@
 <line class="route-line" x1="120" y1="150" x2="120" y2="610" stroke="#000000"/> -- #7C5E00 A
 <line class="route-line" x1="420" y1="150" x2="420" y2="610" stroke="#B45309"/> -- #6B4226 83
 <line class="route-line" x1="720" y1="150" x2="720" y2="610" stroke="#6B4226"/> -- #00A0AF 65
+<g id="route-72">
 <line class="route-line" x1="270" y1="306" x2="850" y2="306" stroke="#E91E63"/>
 <line class="route-line" x1="270" y1="150" x2="270" y2="306" stroke="#E91E63"/>
+</g>
 <line class="route-line" x1="120" y1="314" x2="850" y2="314" stroke="#0078C9"/>
 <line class="route-line" x1="120" y1="150" x2="850" y2="150" stroke="#00843D"/>
 <line class="route-line" x1="120" y1="470" x2="850" y2="470" stroke="#00A0AF"/> -- #B45309 63
@@ -139,69 +157,79 @@
 <rect x="534" y="603" width="22" height="14" rx="4" fill="#7B519C"/>
 <text x="545" y="614" text-anchor="middle" font-size="9" font-weight="800" fill="#ffffff">74</text>
 
-<!-- Grocery stores - amber with dark outline -->
-<circle class="store-point" cx="270" cy="150" r="4.5"/>
-<circle class="store-point" cx="420" cy="150" r="4.5"/>
-<circle class="store-point" cx="500" cy="150" r="4.5"/>
-<circle class="store-point" cx="570" cy="150" r="4.5"/>
-<circle class="store-point" cx="605" cy="150" r="4.5"/>
-<circle class="store-point" cx="720" cy="150" r="4.5"/>
-<circle class="store-point" cx="780" cy="150" r="4.5"/>
-<circle class="store-point" cx="850" cy="150" r="4.5"/>
-<circle class="store-point" cx="120" cy="310" r="4.5"/>
-<circle class="store-point" cx="720" cy="310" r="4.5"/>
-<circle class="store-point" cx="270" cy="470" r="4.5"/>
-<circle class="store-point" cx="570" cy="470" r="4.5"/>
-<circle class="store-point" cx="270" cy="610" r="4.5"/>
-<circle class="store-point" cx="420" cy="610" r="4.5"/>
+<!-- Grocery stores -->
+<g class="store">
+  <circle class="store-point" cx="270" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="240" y="109" width="60" height="20" rx="3"/><text class="grocery-name" x="270" y="123" text-anchor="middle">Target</text></g>
+</g>
 
-<!-- Grocery labels - UNIVERSITY -->
-<rect class="label-box" x="240" y="109" width="60" height="20" rx="3"/>
-<text class="grocery-name" x="270" y="123" text-anchor="middle">Target</text>
+<g class="store">
+  <circle class="store-point" cx="420" cy="150" r="4.5"/>
+  <g class="store-labels">
+    <g class="store-label"><rect class="label-box" x="395" y="109" width="50" height="20" rx="3"/><text class="grocery-name" x="420" y="123" text-anchor="middle">ALDI</text></g>
+    <g class="store-label"><rect class="label-box" x="370" y="86" width="100" height="20" rx="3"/><text class="grocery-name" x="420" y="100" text-anchor="middle">St Paul Halal Mkt</text></g>
+  </g>
+</g>
 
-<rect class="label-box" x="395" y="109" width="50" height="20" rx="3"/>
-<text class="grocery-name" x="420" y="123" text-anchor="middle">ALDI</text>
-<rect class="label-box" x="370" y="86" width="100" height="20" rx="3"/>
-<text class="grocery-name" x="420" y="100" text-anchor="middle">St Paul Halal Mkt</text>
+<g class="store">
+  <circle class="store-point" cx="500" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="468" y="165" width="64" height="20" rx="3"/><text class="grocery-name" x="500" y="179" text-anchor="middle">Choua's</text></g>
+</g>
 
-<rect class="label-box" x="468" y="165" width="64" height="20" rx="3"/>
-<text class="grocery-name" x="500" y="179" text-anchor="middle">Choua's</text>
+<g class="store">
+  <circle class="store-point" cx="570" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="534" y="109" width="72" height="20" rx="3"/><text class="grocery-name" x="570" y="123" text-anchor="middle">Ashama</text></g>
+</g>
 
-<rect class="label-box" x="534" y="109" width="72" height="20" rx="3"/>
-<text class="grocery-name" x="570" y="123" text-anchor="middle">Ashama</text>
+<g class="store">
+  <circle class="store-point" cx="605" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="565" y="165" width="80" height="20" rx="3"/><text class="grocery-name" x="605" y="179" text-anchor="middle">Phil Oriental</text></g>
+</g>
 
-<rect class="label-box" x="565" y="165" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="605" y="179" text-anchor="middle">Phil Oriental</text>
+<g class="store">
+  <circle class="store-point" cx="720" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="682" y="109" width="76" height="20" rx="3"/><text class="grocery-name" x="720" y="123" text-anchor="middle">Shuang Hur</text></g>
+</g>
 
-<rect class="label-box" x="682" y="109" width="76" height="20" rx="3"/>
-<text class="grocery-name" x="720" y="123" text-anchor="middle">Shuang Hur</text>
+<g class="store">
+  <circle class="store-point" cx="780" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="748" y="165" width="68" height="20" rx="3"/><text class="grocery-name" x="782" y="179" text-anchor="middle">Sun Foods</text></g>
+</g>
 
-<rect class="label-box" x="748" y="165" width="68" height="20" rx="3"/>
-<text class="grocery-name" x="782" y="179" text-anchor="middle">Sun Foods</text>
+<g class="store">
+  <circle class="store-point" cx="850" cy="150" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="810" y="109" width="80" height="20" rx="3"/><text class="grocery-name" x="850" y="123" text-anchor="middle">Mi Linda Tierra</text></g>
+</g>
 
-<rect class="label-box" x="810" y="109" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="850" y="123" text-anchor="middle">Mi Linda Tierra</text>
+<g class="store">
+  <circle class="store-point" cx="120" cy="310" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="84" y="328" width="84" height="20" rx="3"/><text class="grocery-name" x="126" y="342" text-anchor="middle">Whole Foods</text></g>
+</g>
 
-<!-- Grocery labels - SELBY-->
-<rect class="label-box" x="84" y="328" width="84" height="20" rx="3"/>
-<text class="grocery-name" x="126" y="342" text-anchor="middle">Whole Foods</text>
+<g class="store">
+  <circle class="store-point" cx="720" cy="310" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="660" y="328" width="120" height="20" rx="3"/><text class="grocery-name" x="720" y="342" text-anchor="middle">Mississippi Market</text></g>
+</g>
 
-<rect class="label-box" x="660" y="328" width="120" height="20" rx="3"/>
-<text class="grocery-name" x="720" y="342" text-anchor="middle">Mississippi Market</text>
+<g class="store">
+  <circle class="store-point" cx="270" cy="470" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="232" y="488" width="80" height="20" rx="3"/><text class="grocery-name" x="272" y="502" text-anchor="middle">Kowalski's</text></g>
+</g>
 
-<!-- Grocery labels - GRAND -->
-<rect class="label-box" x="232" y="488" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="272" y="502" text-anchor="middle">Kowalski's</text>
+<g class="store">
+  <circle class="store-point" cx="570" cy="470" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="530" y="488" width="80" height="20" rx="3"/><text class="grocery-name" x="570" y="502" text-anchor="middle">Golden Fig</text></g>
+</g>
 
-<rect class="label-box" x="530" y="488" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="570" y="502" text-anchor="middle">Golden Fig</text>
+<g class="store">
+  <circle class="store-point" cx="270" cy="610" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="232" y="573" width="80" height="20" rx="3"/><text class="grocery-name" x="272" y="587" text-anchor="middle">Oxendale's</text></g>
+</g>
 
-<!-- Grocery labels - RANDOLPH -->
-<rect class="label-box" x="232" y="573" width="80" height="20" rx="3"/>
-<text class="grocery-name" x="272" y="587" text-anchor="middle">Oxendale's</text>
-
-<rect class="label-box" x="378" y="573" width="86" height="20" rx="3"/>
-<text class="grocery-name" x="422" y="587" text-anchor="middle">Trader Joe's</text>
+<g class="store">
+  <circle class="store-point" cx="420" cy="610" r="4.5"/>
+  <g class="store-label"><rect class="label-box" x="378" y="573" width="86" height="20" rx="3"/><text class="grocery-name" x="422" y="587" text-anchor="middle">Trader Joe's</text></g>
+</g>
 
 <!-- Horizontal street labels -->
 <text class="streetlabel" x="135" y="137">UNIVERSITY</text>
