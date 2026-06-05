@@ -2,6 +2,6 @@
   "name": "errandsee",
   "compatibility_date": "2026-04-23",
   "assets": {
-    "directory": "./artifacts/snel-west-rand-uni/public"
+    "directory": "../../artifacts/snel-west-rand-uni/public"
   }
 }
