@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/eebbesen/errandsee#readme",
   "dependencies": {
-    "playwright": "^1.60.0"
+    "playwright": "^1.60.0",
+    "wrangler": "^4.98.0"
   },
   "devDependencies": {
     "c8": "^10.1.3"

@@ -36,4 +36,4 @@ In the above, `<area>` represents a geography, e.g., snel-west-rand-uni, that I'
 ## Cloudflare Pages deployment
 [Cloudflare Pages](https://pages.cloudflare.com/) provides free, cached hosting for projects displaying static assets. See wrangler.jsonc if you want to change what is displayed. 
 
-    npx wrangler deploy
+    npx wrangler deploy -c ./workers/errandsee/wrangler.jsonc
