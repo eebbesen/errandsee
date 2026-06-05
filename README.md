@@ -1,6 +1,8 @@
 # errandsee
 Helping neighbors understand convenient transit options
 
+Saint Paul, MN Snelling-Randolph: https://stpfood.info/snelrand
+
 ## Requirements
 
 ### Playwright
