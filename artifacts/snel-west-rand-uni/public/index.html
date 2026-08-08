@@ -425,6 +425,14 @@
     }, tooltipShowDelayMs);
   };
 
+  const routeFrequencyLabels = new Map(
+    Array.from(document.querySelectorAll('.key-entry[data-route]')).map(entry => {
+      const valueEl = entry.querySelector('.freq-value');
+      const label = valueEl ? `Every ${valueEl.textContent.trim()} minutes` : '';
+      return [entry.dataset.route, label];
+    })
+  );
+
   document.querySelectorAll('.freq-badge').forEach(badge => {
     const valueEl = badge.querySelector('.freq-value');
     if (!valueEl) return;
@@ -438,6 +446,18 @@
     badge.addEventListener('mouseenter', event => scheduleFreqTooltip(minutesLabel, event));
     badge.addEventListener('mousemove', moveFreqTooltip);
     badge.addEventListener('mouseleave', hideFreqTooltip);
+  });
+
+  document.querySelectorAll('.route-line').forEach(routeLine => {
+    const routeContainer = routeLine.closest('[data-route]');
+    const route = routeLine.dataset.route || routeContainer?.dataset.route;
+    const minutesLabel = route ? routeFrequencyLabels.get(route) : '';
+    if (!minutesLabel) return;
+
+    routeLine.setAttribute('aria-label', minutesLabel);
+    routeLine.addEventListener('mouseenter', event => scheduleFreqTooltip(minutesLabel, event));
+    routeLine.addEventListener('mousemove', moveFreqTooltip);
+    routeLine.addEventListener('mouseleave', hideFreqTooltip);
   });
 </script>
 
