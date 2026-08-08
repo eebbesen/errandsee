@@ -85,17 +85,17 @@
 <line class="street-line" x1="850" y1="150" x2="850" y2="610"></line>
 
 <!-- Route lines -->
-<line class="route-line" data-route="a" x1="120" y1="150" x2="120" y2="610" stroke="#000000"></line>
-<line class="route-line" data-route="83" x1="420" y1="150" x2="420" y2="610" stroke="#B45309"></line>
-<line class="route-line" data-route="65" x1="720" y1="150" x2="720" y2="610" stroke="#6B4226"></line>
+<line class="route-line" data-route="a" x1="120" y1="150" x2="120" y2="610" stroke="#000000" aria-label="Every 10 minutes"></line>
+<line class="route-line" data-route="83" x1="420" y1="150" x2="420" y2="610" stroke="#B45309" aria-label="Every 30 minutes"></line>
+<line class="route-line" data-route="65" x1="720" y1="150" x2="720" y2="610" stroke="#6B4226" aria-label="Every 30 minutes"></line>
 <g id="route-72" data-route="72">
-  <line class="route-line" x1="270" y1="306" x2="850" y2="306" stroke="#E91E63"></line>
-  <line class="route-line" x1="270" y1="150" x2="270" y2="306" stroke="#E91E63"></line>
+  <line class="route-line" x1="270" y1="306" x2="850" y2="306" stroke="#E91E63" aria-label="Every 30 minutes"></line>
+  <line class="route-line" x1="270" y1="150" x2="270" y2="306" stroke="#E91E63" aria-label="Every 30 minutes"></line>
 </g>
-<line class="route-line" data-route="b" x1="120" y1="314" x2="850" y2="314" stroke="#0078C9"></line>
-<line class="route-line" data-route="gl" x1="120" y1="150" x2="850" y2="150" stroke="#00843D"></line>
-<line class="route-line" data-route="63" x1="120" y1="470" x2="850" y2="470" stroke="#00A0AF"></line>
-<line class="route-line" data-route="74" x1="120" y1="610" x2="850" y2="610" stroke="#7B519C"></line>
+<line class="route-line" data-route="b" x1="120" y1="314" x2="850" y2="314" stroke="#0078C9" aria-label="Every 15 minutes"></line>
+<line class="route-line" data-route="gl" x1="120" y1="150" x2="850" y2="150" stroke="#00843D" aria-label="Every 15 minutes"></line>
+<line class="route-line" data-route="63" x1="120" y1="470" x2="850" y2="470" stroke="#00A0AF" aria-label="Every 15 minutes"></line>
+<line class="route-line" data-route="74" x1="120" y1="610" x2="850" y2="610" stroke="#7B519C" aria-label="Every 20 minutes"></line>
 
 <!-- Route number labels -->
 <g class="route-badge" data-route="gl">
@@ -231,7 +231,7 @@
 
 <a class="key-link" href="https://www.metrotransit.org/route/green" target="_blank" rel="noopener noreferrer" aria-label="Green Line route info">
   <g class="key-entry" data-route="gl" transform="translate(110, 684)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D" aria-label="Every 15 minutes"></line>
     <text class="key-label" x="30" y="4">Green Line LRT · University</text>
     <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -241,7 +241,7 @@
 </a>
 <a class="key-link" href="https://www.metrotransit.org/route/aline" target="_blank" rel="noopener noreferrer" aria-label="A Line route info">
   <g class="key-entry key-col-2" data-route="a" transform="translate(400, 684)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000" aria-label="Every 10 minutes"></line>
     <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
     <g class="freq-badge" aria-label="Every 10 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -251,7 +251,7 @@
 </a>
 <a class="key-link" href="https://www.metrotransit.org/route/bline" target="_blank" rel="noopener noreferrer" aria-label="B Line route info">
   <g class="key-entry key-col-3" data-route="b" transform="translate(690, 684)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9" aria-label="Every 15 minutes"></line>
     <text class="key-label" x="30" y="4">B Line BRT · Selby</text>
     <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -262,7 +262,7 @@
 
 <a class="key-link" href="https://www.metrotransit.org/route/63" target="_blank" rel="noopener noreferrer" aria-label="Route 63 info">
   <g class="key-entry" data-route="63" transform="translate(110, 702)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF" aria-label="Every 15 minutes"></line>
     <text class="key-label" x="30" y="4">Route 63 · Grand</text>
     <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -272,7 +272,7 @@
 </a>
 <a class="key-link" href="https://www.metrotransit.org/route/65" target="_blank" rel="noopener noreferrer" aria-label="Route 65 info">
   <g class="key-entry key-col-2" data-route="65" transform="translate(400, 702)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226" aria-label="Every 30 minutes"></line>
     <text class="key-label" x="30" y="4">Route 65 · Dale</text>
     <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -282,7 +282,7 @@
 </a>
 <a class="key-link" href="https://www.metrotransit.org/route/72" target="_blank" rel="noopener noreferrer" aria-label="Route 72 info">
   <g class="key-entry key-col-3" data-route="72" transform="translate(690, 702)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63" aria-label="Every 30 minutes"></line>
     <text class="key-label" x="30" y="4">Route 72 · Selby</text>
     <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -293,7 +293,7 @@
 
 <a class="key-link" href="https://www.metrotransit.org/route/74" target="_blank" rel="noopener noreferrer" aria-label="Route 74 info">
   <g class="key-entry" data-route="74" transform="translate(110, 720)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C" aria-label="Every 20 minutes"></line>
     <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
     <g class="freq-badge" aria-label="Every 20 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
@@ -303,7 +303,7 @@
 </a>
 <a class="key-link" href="https://www.metrotransit.org/route/83" target="_blank" rel="noopener noreferrer" aria-label="Route 83 info">
   <g class="key-entry key-col-2" data-route="83" transform="translate(400, 720)">
-    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309"></line>
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309" aria-label="Every 30 minutes"></line>
     <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
     <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
