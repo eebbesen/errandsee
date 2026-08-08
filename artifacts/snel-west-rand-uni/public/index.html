@@ -35,6 +35,24 @@
     font-size: 12px;
     text-align: center;
   }
+  .freq-tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, calc(-100% - 12px));
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #111827;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.09s ease;
+    z-index: 1000;
+  }
+  .freq-tooltip.is-visible { opacity: 1; }
 </style>
 </head>
 <body>
@@ -52,6 +70,11 @@
   .grocery-name { font-size: 10px; font-weight: 600; fill: #000000; }
   .grocery-leader { stroke: #9ca3af; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
   .key-label { font-size: 11px; font-weight: 400; fill: #111827; }
+  .freq-circle { fill: #ffffff; stroke: #374151; stroke-width: 1; }
+  .freq-value { font-size: 9px; font-weight: 700; fill: #111827; text-anchor: middle; dominant-baseline: middle; }
+  .freq-badge { transform: translateX(0); }
+  .key-col-2 .freq-badge { transform: translateX(-31px); }
+  .key-col-3 .freq-badge { transform: translateX(-41px); }
   .key-heading { font-size: 11px; font-weight: 600; fill: #4b5563; letter-spacing: 0.8px; }
   .route-line { stroke-width: 6; stroke-linecap: round; transition: stroke-width 0.15s ease; }
   .route-active.route-line,
@@ -93,6 +116,8 @@
   .dl-label-svg { font-size: 12px; font-weight: 600; fill: #312E81; pointer-events: none; }
   a.dl-link { cursor: pointer; }
   a.dl-link:focus-visible { outline: 3px solid #312E81; outline-offset: 3px; border-radius: 6px; }
+  a.key-link { cursor: pointer; }
+  a.key-link:focus-visible { outline: 3px solid #1f2937; outline-offset: 3px; border-radius: 6px; }
 </style>
 </defs>
 
@@ -103,15 +128,15 @@
 <text class="subtitle" x="40" y="60">Snelling to Western · University to Randolph</text>
 
 <!-- Download buttons -->
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.pdf" download aria-label="Download PDF">
+<a class="dl-link" href="snel-west-rand-uni.pdf" download target="_blank" rel="noopener noreferrer" aria-label="Download PDF">
   <rect class="dl-btn-pdf" x="636" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-pdf" x="674" y="54" text-anchor="middle">PDF</text>
 </a>
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.png" download aria-label="Download PNG">
+<a class="dl-link" href="snel-west-rand-uni.png" download target="_blank" rel="noopener noreferrer" aria-label="Download PNG">
   <rect class="dl-btn-png" x="720" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-png" x="758" y="54" text-anchor="middle">PNG</text>
 </a>
-<a class="dl-link" href="saint_paul_snel-west-rand-uni.svg" download aria-label="Download SVG">
+<a class="dl-link" href="snel-west-rand-uni.svg" download target="_blank" rel="noopener noreferrer" aria-label="Download SVG">
   <rect class="dl-btn-svg" x="804" y="35" width="76" height="28" rx="6"/>
   <text class="dl-label-svg" x="842" y="54" text-anchor="middle">SVG</text>
 </a>
@@ -272,44 +297,93 @@
 <!-- Route key -->
 <text class="key-heading" x="40" y="688">ROUTES</text>
 
-<g class="key-entry" data-route="gl" transform="translate(110, 684)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"/>
-  <text class="key-label" x="30" y="4">Green Line LRT · University</text>
-</g>
-<g class="key-entry" data-route="a" transform="translate(370, 684)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000"/>
-  <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
-</g>
-<g class="key-entry" data-route="b" transform="translate(620, 684)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9"/>
-  <text class="key-label" x="30" y="4">B Line BRT · Selby</text>
-</g>
+<a class="key-link" href="https://www.metrotransit.org/route/green" target="_blank" rel="noopener noreferrer" aria-label="Green Line route info">
+  <g class="key-entry" data-route="gl" transform="translate(110, 684)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"/>
+    <text class="key-label" x="30" y="4">Green Line LRT · University</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">15</text>
+    </g>
+  </g>
+</a>
+<a class="key-link" href="https://www.metrotransit.org/route/aline" target="_blank" rel="noopener noreferrer" aria-label="A Line route info">
+  <g class="key-entry key-col-2" data-route="a" transform="translate(400, 684)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000"/>
+    <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">10</text>
+    </g>
+  </g>
+</a>
+<a class="key-link" href="https://www.metrotransit.org/route/bline" target="_blank" rel="noopener noreferrer" aria-label="B Line route info">
+  <g class="key-entry key-col-3" data-route="b" transform="translate(690, 684)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9"/>
+    <text class="key-label" x="30" y="4">B Line BRT · Selby</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">15</text>
+    </g>
+  </g>
+</a>
 
-<g class="key-entry" data-route="63" transform="translate(110, 702)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"/>
-  <text class="key-label" x="30" y="4">Route 63 · Grand</text>
-</g>
-<g class="key-entry" data-route="65" transform="translate(370, 702)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226"/>
-  <text class="key-label" x="30" y="4">Route 65 · Dale</text>
-</g>
-<g class="key-entry" data-route="72" transform="translate(620, 702)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63"/>
-  <text class="key-label" x="30" y="4">Route 72 · Selby</text>
-</g>
+<a class="key-link" href="https://www.metrotransit.org/route/63" target="_blank" rel="noopener noreferrer" aria-label="Route 63 info">
+  <g class="key-entry" data-route="63" transform="translate(110, 702)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"/>
+    <text class="key-label" x="30" y="4">Route 63 · Grand</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">15</text>
+    </g>
+  </g>
+</a>
+<a class="key-link" href="https://www.metrotransit.org/route/65" target="_blank" rel="noopener noreferrer" aria-label="Route 65 info">
+  <g class="key-entry key-col-2" data-route="65" transform="translate(400, 702)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226"/>
+    <text class="key-label" x="30" y="4">Route 65 · Dale</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">30</text>
+    </g>
+  </g>
+</a>
+<a class="key-link" href="https://www.metrotransit.org/route/72" target="_blank" rel="noopener noreferrer" aria-label="Route 72 info">
+  <g class="key-entry key-col-3" data-route="72" transform="translate(690, 702)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63"/>
+    <text class="key-label" x="30" y="4">Route 72 · Selby</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">30</text>
+    </g>
+  </g>
+</a>
 
-<g class="key-entry" data-route="74" transform="translate(110, 720)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"/>
-  <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
-</g>
-<g class="key-entry" data-route="83" transform="translate(370, 720)">
-  <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309"/>
-  <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
-</g>
+<a class="key-link" href="https://www.metrotransit.org/route/74" target="_blank" rel="noopener noreferrer" aria-label="Route 74 info">
+  <g class="key-entry" data-route="74" transform="translate(110, 720)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"/>
+    <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">20</text>
+    </g>
+  </g>
+</a>
+<a class="key-link" href="https://www.metrotransit.org/route/83" target="_blank" rel="noopener noreferrer" aria-label="Route 83 info">
+  <g class="key-entry key-col-2" data-route="83" transform="translate(400, 720)">
+    <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309"/>
+    <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
+    <g class="freq-badge">
+      <circle class="freq-circle" cx="205" cy="0" r="8"/>
+      <text class="freq-value" x="205" y="0">30</text>
+    </g>
+  </g>
+</a>
 
 </svg>
 
 </div>
+<div id="freq-tooltip" class="freq-tooltip" role="tooltip" aria-hidden="true"></div>
 
 <script>
   document.querySelectorAll('[data-route]').forEach(el => {
@@ -321,6 +395,49 @@
       const route = el.dataset.route;
       document.querySelectorAll(`[data-route="${route}"]`).forEach(e => e.classList.remove('route-active'));
     });
+  });
+
+  const freqTooltip = document.getElementById('freq-tooltip');
+  const tooltipShowDelayMs = 250;
+  let tooltipTimer;
+
+  const hideFreqTooltip = () => {
+    clearTimeout(tooltipTimer);
+    if (!freqTooltip) return;
+    freqTooltip.classList.remove('is-visible');
+    freqTooltip.setAttribute('aria-hidden', 'true');
+  };
+
+  const moveFreqTooltip = event => {
+    if (!freqTooltip) return;
+    freqTooltip.style.left = `${event.clientX}px`;
+    freqTooltip.style.top = `${event.clientY}px`;
+  };
+
+  const scheduleFreqTooltip = (label, event) => {
+    clearTimeout(tooltipTimer);
+    if (!freqTooltip) return;
+    freqTooltip.textContent = label;
+    moveFreqTooltip(event);
+    tooltipTimer = setTimeout(() => {
+      freqTooltip.classList.add('is-visible');
+      freqTooltip.setAttribute('aria-hidden', 'false');
+    }, tooltipShowDelayMs);
+  };
+
+  document.querySelectorAll('.freq-badge').forEach(badge => {
+    const valueEl = badge.querySelector('.freq-value');
+    if (!valueEl) return;
+
+    const minutesLabel = `${valueEl.textContent.trim()} minutes`;
+    badge.setAttribute('aria-label', minutesLabel);
+
+    const existingTitle = badge.querySelector('title');
+    if (existingTitle) existingTitle.remove();
+
+    badge.addEventListener('mouseenter', event => scheduleFreqTooltip(minutesLabel, event));
+    badge.addEventListener('mousemove', moveFreqTooltip);
+    badge.addEventListener('mouseleave', hideFreqTooltip);
   });
 </script>
 
