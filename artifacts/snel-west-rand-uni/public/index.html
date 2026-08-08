@@ -35,6 +35,24 @@
     font-size: 12px;
     text-align: center;
   }
+  .freq-tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, calc(-100% - 12px));
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #111827;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.09s ease;
+    z-index: 1000;
+  }
+  .freq-tooltip.is-visible { opacity: 1; }
 </style>
 </head>
 <body>
@@ -347,6 +365,7 @@
 </svg>
 
 </div>
+<div id="freq-tooltip" class="freq-tooltip" role="tooltip" aria-hidden="true"></div>
 
 <script>
   document.querySelectorAll('[data-route]').forEach(el => {
@@ -358,6 +377,49 @@
       const route = el.dataset.route;
       document.querySelectorAll(`[data-route="${route}"]`).forEach(e => e.classList.remove('route-active'));
     });
+  });
+
+  const freqTooltip = document.getElementById('freq-tooltip');
+  const tooltipShowDelayMs = 250;
+  let tooltipTimer;
+
+  const hideFreqTooltip = () => {
+    clearTimeout(tooltipTimer);
+    if (!freqTooltip) return;
+    freqTooltip.classList.remove('is-visible');
+    freqTooltip.setAttribute('aria-hidden', 'true');
+  };
+
+  const moveFreqTooltip = event => {
+    if (!freqTooltip) return;
+    freqTooltip.style.left = `${event.clientX}px`;
+    freqTooltip.style.top = `${event.clientY}px`;
+  };
+
+  const scheduleFreqTooltip = (label, event) => {
+    clearTimeout(tooltipTimer);
+    if (!freqTooltip) return;
+    freqTooltip.textContent = label;
+    moveFreqTooltip(event);
+    tooltipTimer = setTimeout(() => {
+      freqTooltip.classList.add('is-visible');
+      freqTooltip.setAttribute('aria-hidden', 'false');
+    }, tooltipShowDelayMs);
+  };
+
+  document.querySelectorAll('.freq-badge').forEach(badge => {
+    const valueEl = badge.querySelector('.freq-value');
+    if (!valueEl) return;
+
+    const minutesLabel = `${valueEl.textContent.trim()} minutes`;
+    badge.setAttribute('aria-label', minutesLabel);
+
+    const existingTitle = badge.querySelector('title');
+    if (existingTitle) existingTitle.remove();
+
+    badge.addEventListener('mouseenter', event => scheduleFreqTooltip(minutesLabel, event));
+    badge.addEventListener('mousemove', moveFreqTooltip);
+    badge.addEventListener('mouseleave', hideFreqTooltip);
   });
 </script>
 
