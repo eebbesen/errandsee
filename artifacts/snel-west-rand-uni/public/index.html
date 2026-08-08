@@ -429,7 +429,7 @@
     const valueEl = badge.querySelector('.freq-value');
     if (!valueEl) return;
 
-    const minutesLabel = `${valueEl.textContent.trim()} minutes`;
+    const minutesLabel = `Every ${valueEl.textContent.trim()} minutes`;
     badge.setAttribute('aria-label', minutesLabel);
 
     const existingTitle = badge.querySelector('title');
