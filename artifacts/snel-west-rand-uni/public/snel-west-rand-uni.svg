@@ -233,7 +233,7 @@
   <g class="key-entry" data-route="gl" transform="translate(110, 684)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"></line>
     <text class="key-label" x="30" y="4">Green Line LRT · University</text>
-    <g class="freq-badge" aria-label="15 minutes">
+    <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">15</text>
     </g>
@@ -243,7 +243,7 @@
   <g class="key-entry key-col-2" data-route="a" transform="translate(400, 684)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000"></line>
     <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
-    <g class="freq-badge" aria-label="10 minutes">
+    <g class="freq-badge" aria-label="Every 10 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">10</text>
     </g>
@@ -253,7 +253,7 @@
   <g class="key-entry key-col-3" data-route="b" transform="translate(690, 684)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9"></line>
     <text class="key-label" x="30" y="4">B Line BRT · Selby</text>
-    <g class="freq-badge" aria-label="15 minutes">
+    <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">15</text>
     </g>
@@ -264,7 +264,7 @@
   <g class="key-entry" data-route="63" transform="translate(110, 702)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"></line>
     <text class="key-label" x="30" y="4">Route 63 · Grand</text>
-    <g class="freq-badge" aria-label="15 minutes">
+    <g class="freq-badge" aria-label="Every 15 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">15</text>
     </g>
@@ -274,7 +274,7 @@
   <g class="key-entry key-col-2" data-route="65" transform="translate(400, 702)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226"></line>
     <text class="key-label" x="30" y="4">Route 65 · Dale</text>
-    <g class="freq-badge" aria-label="30 minutes">
+    <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">30</text>
     </g>
@@ -284,7 +284,7 @@
   <g class="key-entry key-col-3" data-route="72" transform="translate(690, 702)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63"></line>
     <text class="key-label" x="30" y="4">Route 72 · Selby</text>
-    <g class="freq-badge" aria-label="30 minutes">
+    <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">30</text>
     </g>
@@ -295,7 +295,7 @@
   <g class="key-entry" data-route="74" transform="translate(110, 720)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"></line>
     <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
-    <g class="freq-badge" aria-label="20 minutes">
+    <g class="freq-badge" aria-label="Every 20 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">20</text>
     </g>
@@ -305,7 +305,7 @@
   <g class="key-entry key-col-2" data-route="83" transform="translate(400, 720)">
     <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309"></line>
     <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
-    <g class="freq-badge" aria-label="30 minutes">
+    <g class="freq-badge" aria-label="Every 30 minutes">
       <circle class="freq-circle" cx="205" cy="0" r="8"></circle>
       <text class="freq-value" x="205" y="0">30</text>
     </g>
