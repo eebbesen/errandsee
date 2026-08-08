@@ -52,6 +52,11 @@
   .grocery-name { font-size: 10px; font-weight: 600; fill: #000000; }
   .grocery-leader { stroke: #9ca3af; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
   .key-label { font-size: 11px; font-weight: 400; fill: #111827; }
+  .freq-circle { fill: #ffffff; stroke: #374151; stroke-width: 1; }
+  .freq-value { font-size: 9px; font-weight: 700; fill: #111827; text-anchor: middle; dominant-baseline: middle; }
+  .freq-badge { transform: translateX(0); }
+  .key-col-2 .freq-badge { transform: translateX(-31px); }
+  .key-col-3 .freq-badge { transform: translateX(-41px); }
   .key-heading { font-size: 11px; font-weight: 600; fill: #4b5563; letter-spacing: 0.8px; }
   .route-line { stroke-width: 6; stroke-linecap: round; transition: stroke-width 0.15s ease; }
   .route-active.route-line,
@@ -275,36 +280,68 @@
 <g class="key-entry" data-route="gl" transform="translate(110, 684)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00843D"/>
   <text class="key-label" x="30" y="4">Green Line LRT · University</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
-<g class="key-entry" data-route="a" transform="translate(370, 684)">
+<g class="key-entry key-col-2" data-route="a" transform="translate(400, 684)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#000000"/>
   <text class="key-label" x="30" y="4">A Line BRT · Snelling</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
-<g class="key-entry" data-route="b" transform="translate(620, 684)">
+<g class="key-entry key-col-3" data-route="b" transform="translate(690, 684)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#0078C9"/>
   <text class="key-label" x="30" y="4">B Line BRT · Selby</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
 
 <g class="key-entry" data-route="63" transform="translate(110, 702)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#00A0AF"/>
   <text class="key-label" x="30" y="4">Route 63 · Grand</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
-<g class="key-entry" data-route="65" transform="translate(370, 702)">
+<g class="key-entry key-col-2" data-route="65" transform="translate(400, 702)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#6B4226"/>
   <text class="key-label" x="30" y="4">Route 65 · Dale</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
-<g class="key-entry" data-route="72" transform="translate(620, 702)">
+<g class="key-entry key-col-3" data-route="72" transform="translate(690, 702)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#E91E63"/>
   <text class="key-label" x="30" y="4">Route 72 · Selby</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
 
 <g class="key-entry" data-route="74" transform="translate(110, 720)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#7B519C"/>
   <text class="key-label" x="30" y="4">Route 74 · Randolph Ave</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
-<g class="key-entry" data-route="83" transform="translate(370, 720)">
+<g class="key-entry key-col-2" data-route="83" transform="translate(400, 720)">
   <line class="route-line" x1="0" y1="0" x2="22" y2="0" stroke="#B45309"/>
   <text class="key-label" x="30" y="4">Route 83 · Lexington</text>
+  <g class="freq-badge">
+    <circle class="freq-circle" cx="205" cy="0" r="8"/>
+    <text class="freq-value" x="205" y="0">10</text>
+  </g>
 </g>
 
 </svg>
